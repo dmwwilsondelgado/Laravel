@@ -1,0 +1,13 @@
+: operador de resuoluion 
+
+private = modificador de aceso 
+
+
+los famoss trais para solucionar la herencia multiple en php
+
+
+documentación Faker php
+
+faker picsum image
+
+que son los resultados cartesianos

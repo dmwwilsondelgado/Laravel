@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('paht')->unique();
+            $table->string('paht');
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
@@ -25,4 +26,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('images');
     }
+    
 };

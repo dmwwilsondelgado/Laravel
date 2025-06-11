@@ -20,6 +20,8 @@ class ProductfactoryFactory extends Factory
     {
         return [
             'name'=>fake()->word(),
+            'price'=> fake()->randomFloat(2,10,1000),
+            'stock'=> fake()->numberBetween(0,100),
             'categoria_id'=> Category::all()->random()->id,
             'image_id'=> Image::factory()->create()->id,
         ];

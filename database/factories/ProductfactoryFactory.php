@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
+use App\Models\image;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,9 @@ class ProductfactoryFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name'=>fake()->word(),
+            'categoria_id'=> Category::all()->random()->id,
+            'image_id'=> Image::factory()->create()->id,
         ];
     }
 }

@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('productos', function (Blueprint $table) {
-            //
+            $table->unsignedInteger('image_id')->nullable();
+            $table->unsignedInteger('image_id')->references('id')->on('images');
         });
     }
 
@@ -22,7 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('productos', function (Blueprint $table) {
-            //
+            $table->dropForeign('products_image_id_foreing');
+            $table->dropColumn('image_id');
         });
     }
 };
